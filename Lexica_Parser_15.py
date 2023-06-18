@@ -190,7 +190,7 @@ def parser(sentence):
  print('''\n
 |------------------------------------|''')
  if symbol == 'EOS' and len(stack) == 0:
-  print('Inputan String :\n', sentence, '"', '\nDiterima, Sesuai Grammar')
+  print('Inputan String :\n', sentence, '\nDiterima, Sesuai Grammar')
  else:
   print('ERROR, Inputan String:\n', sentence, ', \nTidak Diterima, Tidak Sesuai Grammar')
  print('''|------------------------------------|''')
@@ -257,6 +257,10 @@ class Lexer:
                             if current_char == 't':
                                 self.position += 1
                                 return Token('KEYWORD', 'input')
+                else:
+                  print("Invalid character:", current_char)
+                  print("Karena invalid, maka tidak bisa dilanjutkan ke proses parser")
+                  break
 
             if current_char == 'w':
                 self.position += 1
@@ -273,6 +277,10 @@ class Lexer:
                             if current_char == 'e':
                                 self.position += 1
                                 return Token('KEYWORD', 'while')
+                else:
+                  print("Invalid character:", current_char)
+                  print("Karena invalid, maka tidak bisa dilanjutkan ke proses parser")
+                  break
 
             if current_char == 'T':
                 self.position += 1
@@ -286,6 +294,10 @@ class Lexer:
                         if current_char == 'e':
                             self.position += 1
                             return Token('KEYWORD', 'True')
+                else:
+                  print("Invalid character:", current_char)
+                  print("Karena invalid, maka tidak bisa dilanjutkan ke proses parser")
+                  break
 
             if current_char == 'b':
                 self.position += 1
@@ -302,6 +314,10 @@ class Lexer:
                             if current_char == 'k':
                                 self.position += 1
                                 return Token('KEYWORD', 'break')
+                else:
+                  print("Invalid character:", current_char)
+                  print("Karena invalid, maka tidak bisa dilanjutkan ke proses parser")
+                  break
 
             if current_char == ':':
                 self.position += 1
@@ -366,13 +382,16 @@ def LexernParser(sentence):
       print(f"Token: {token.type}\tValue: {token.value}")
   if i >= 21:
     parser(sentence)
-  return 0
 
 #Main Program
 print("|============= TERMINAL =============|\n")
 file = open("file.txt", "r")
 sentence = file.read()
 file.close()
+# sentence = while True :
+#     a = int(input())
+#     if a == 9 :
+#         break
 print(sentence)
 input_string = sentence.lower()+'#'
 LexernParser(sentence)
