@@ -1,2 +1,2 @@
 # lexical-analyser-and-parser
-Tugas Besar Teori Bahasa dan Automata CCI2L3
+Tugas Besar Teori Bahasa dan Automata CII2L3
