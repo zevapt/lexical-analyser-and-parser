@@ -370,13 +370,9 @@ def LexernParser(sentence):
 
 #Main Program
 print("|============= TERMINAL =============|\n")
-'''file = open("file.txt", "r")
+file = open("file.txt", "r")
 sentence = file.read()
-file.close()'''
-sentence = '''while True :
-    a = int(input())
-    if a 1 == :
-        break'''
+file.close()
 print(sentence)
 input_string = sentence.lower()+'#'
 LexernParser(sentence)
