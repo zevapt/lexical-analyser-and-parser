@@ -1,5 +1,9 @@
 # lexical-analyser-and-parser
 Tugas Besar Teori Bahasa dan Automata CII2L3
+Kelompok 15 | Kelas IF-45-03
+Zeva P (1301213005)
+Trisula D (1301210522)
+Raihan F (1301213113)
 
 Berikut langkah - langkah untuk menjalankan kode program yang telah kami buat :
 1. Buka file kode “Lexica_Parser_15.py” yang dapat di-unduh di link berikut, https://github.com/zevapt/lexical-analyser-and-parser/blob/main/Lexica_Parser_15.py 
